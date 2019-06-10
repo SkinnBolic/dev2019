@@ -8,7 +8,13 @@ $hoje = mktime(0, 0, 0, date('m'), date('d'), date('y'));
 //Descobre a unix timestamp da data de nascimento do fulano
 $nascimento = mktime(0, 0, 0, $mes, $dia, $ano);
 //Depois apenas fazemos o calculo já citado :)
-$idade = floor((((($hoje - $nascimento)/60) /60) /24)/ 465.25);
+$idade = floor((((($hoje - $nascimento)/60) /60) /24)/ 365.25);
+//Ver se é o dia do Aniversário
+if(date('m')==$mes and date('d')==$dia){
+    $niver="Parabéns, hoje é seu Aniversário!";
+}else{
+    $niver="";
+}
 ?>
 
 <?php
@@ -33,7 +39,7 @@ $nomecompleto   = strtoupper($sobrenome).", ".ucfirst($nome);
 <body>
     <p>
         Olá <strong><?php echo $nomecompleto; ?></strong>,tudo bem? <br>
-        Você tem <strong><?php echo $idade; ?></strong> anos!<br>
+        Você tem <strong><?php echo $idade; ?></strong> anos!<br><?php echo $niver; ?><br>
         <strong><?php echo $email; ?></strong>
     </p>
 </body>

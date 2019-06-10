@@ -1,0 +1,26 @@
+body{
+    width: 1366px;
+    margin: 0 auto;
+    background-color: yellow;
+   
+}
+
+p{
+    color:#000;
+    text-align: justify;
+    font-family: "Cinzel";
+    font-size: 60px;
+    font-weight: 600;
+}
+img{
+    background-image: url(images/1ptk.gif);
+    display: block;
+    max-width: 100%;
+}
+.dia{
+    background-image: url(images/1ptk.gif);
+    background-color: yellow;
+}
+.tarde{
+    background-color: orange;
+}
