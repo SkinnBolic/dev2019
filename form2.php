@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <form id="contato" action="recebe2.php" method="post">
+    <form id="contato" action="recebe2.php" method="post"> 
         <label for="name">Nome</label>
         <input type="text" name="nome" id="nome" placeholder="Informe o seu Nome"><br>
 

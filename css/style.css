@@ -1,26 +1,21 @@
 body{
-    width: 1366px;
-    margin: 0 auto;
-    background-color: yellow;
-   
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 26px;
+    text-align: center;
+    margin: 0 auto;   
 }
 
-p{
-    color:#000;
-    text-align: justify;
-    font-family: "Cinzel";
-    font-size: 60px;
-    font-weight: 600;
-}
-img{
-    background-image: url(images/1ptk.gif);
-    display: block;
-    max-width: 100%;
-}
+
 .dia{
-    background-image: url(images/1ptk.gif);
-    background-color: yellow;
+   background-color: yellow;
+   color: #f00;
+
 }
 .tarde{
     background-color: orange;
+    color: #60F;
+}
+.noite{
+    background-color: #20F;
+    color: #f60;
 }
