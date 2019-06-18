@@ -1,3 +1,29 @@
+<?php
+//Verificando se foi enviado um formulário
+if(isset($_GET["enviar"])){
+
+    //Recebendo os campos do formulário e guardando nas variáveis(potes)
+    $txtnome          = $_GET["txt-nome"];
+    $txtcurso         = $_GET["txt-curso"];
+    $txtcargahoraria  = $_GET["txt-carga-horaria"];
+    $txtcargadia      = $_GET["txt-carga-dia"];
+    $txtfrequencia    = $_GET["txt-frequencia"];
+
+    $diastotaisdocurso = $txtcargahoraria/$txtcargadia;
+    $qtddefaltasemdias = $diastotaisdocurso*((100-$txtfrequencia)/100);
+
+    $frase  = "Olá ".$txtnome.", Bem Vindis ao curso ".$txtcurso.", a carga horária total deste curso ";
+    $frase .="é de ".$txtcargahoraria." horas. A carga horária por dia é de ".$txtcargadia." horas, o que ";
+    $frase .="equivale a ".$diastotaisdocurso." dias de curso no total. A frequência obrigatória ";
+    $frase .="é de ".$txtfrequencia."%, ou seja, você poderá faltar no total ".$qtddefaltasemdias." dias.";
+}else{
+    //Frase no caso do formulário ainda não ter sido preenchido
+    $frase = "Informe os dados no formulário acima.";
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,12 +64,13 @@
                 <label for="">Frequência Obrigatória</label>
                 <input type="text" id="txt-frequencia" name="txt-frequencia" size="40" placeholder="Digite o valor em porcentágem sem o simbulo (%).">
 
-                <br><input type="submit" value="Calcular">
+                <br><input type="submit" name="enviar" value="Calcular">
 
                 <br><br>
-                <span class="resultado"></span>
-                <span class="resultado"></span>
-                <span class="resultado"></span>
+                <span class="resultado">
+                    <?php echo $frase; ?>
+                </span>
+
 
             </form>
 
