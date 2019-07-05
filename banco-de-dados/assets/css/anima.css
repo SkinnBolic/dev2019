@@ -1,0 +1,151 @@
+
+/* Encapsulador */
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1024px;
+}
+
+/* Estilo da lista */
+.wrapper ul {
+  list-style: none;
+}
+
+/* Estilo inicial dos ícones */
+.wrapper ul li {
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  margin: 0 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10%;
+  border: 5px solid #D8E2DC;
+  float: left;
+  transition: all 0.5s ease;
+}
+
+.wrapper ul li .fa {
+  color: rgb(165, 165, 165);
+  margin-top: 35px;
+  transition: all 0.5s ease;
+}
+.wrapper ul li .fab {
+  color: rgb(165, 165, 165);
+  margin-top: 35px;
+  transition: all 0.5s ease;
+}
+
+
+
+
+
+/* Icone 1 */
+.wrapper ul li:hover.bullhorn {
+  border: 5px solid #3b5998;
+  box-shadow: 0 0 15px #3b5998;
+  transition: all 0.5s ease;
+}
+.wrapper ul li:hover .fa-bullhorn {
+  color: #3b5998;
+  text-shadow: 0 0 15px #3b5998;
+  transition: all 0.5s ease;
+  -webkit-transform:rotate(360deg);
+  -moz-transform:rotate(360deg); 
+  -o-transform:rotate(360deg);
+}
+
+/* Icone 2 */
+.wrapper ul li:hover.gift {
+  border: 5px solid #00aced;
+  box-shadow: 0 0 15px #00aced;
+  transition: all 0.5s ease;
+}
+.wrapper ul li:hover .fa-gift {
+  color: #00aced;
+  text-shadow: 0 0 15px #00aced;
+  transition: all 0.5s ease;
+  animation: zoom 0.5s alternate infinite ease-in;
+}
+
+
+/* Animações */
+@keyframes zoom {
+  0%   {transform: scale(.8);}
+  100% {transform: scale(1.5);}
+}
+
+/* Icone 3 */
+.wrapper ul li:hover.android {
+  border: 5px solid #A4C639;
+  box-shadow: 0 0 15px #A4C639;
+  transition: all 0.5s ease;
+}
+.wrapper ul li:hover .fa-android {
+  color: #A4C639;
+  text-shadow: 0 0 15px #A4C639;
+  transition: all 1.5s ease;
+  animation: roll 1.5s alternate ease-in;
+  /* -webkit-transform:rotate(90deg);
+  -moz-transform:rotate(90deg); 
+  -o-transform:rotate(90deg);
+ */
+}
+/* Animações */
+@keyframes roll {
+  0%   {transform: rotate(360deg);}
+  100% {transform: rotate(0deg);}
+}
+
+/* Icone 4 */
+.wrapper ul li:hover.bomb{
+  border: 5px solid rgb(255, 0, 0);
+  box-shadow: 0 0 15px rgb(198, 144, 57);
+  transition: all 0.5s ease;
+}
+.wrapper ul li:hover .fa-bomb {
+  color: rgb(198, 120, 57);
+  text-shadow: 0 0 15px rgb(198, 57, 57);
+  transition: all 1.5s ease;
+  animation: exemplo5 0.1s alternate infinite ease-in;
+}
+
+/* Animações */
+@keyframes exemplo5 {
+  from {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  15% {
+    -webkit-transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+  }
+
+  30% {
+    -webkit-transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+  }
+
+  45% {
+    -webkit-transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+  }
+
+  60% {
+    -webkit-transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+  }
+
+  75% {
+    -webkit-transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
